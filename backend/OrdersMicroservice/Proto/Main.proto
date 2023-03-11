@@ -1,0 +1,13 @@
+syntax= "proto3";
+
+package OrdersService;
+
+option java_multiple_files=true;
+
+import "CreateOrder.proto";
+
+service OrdersGrpcService {
+
+    rpc CreateOrder(CreateOrderRequest) returns(CreateOrderResponse){ }
+
+}
