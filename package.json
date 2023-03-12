@@ -20,6 +20,8 @@
     "dependencies": {
         "@grpc/grpc-js": "^1.8.12",
         "google-protobuf": "^3.21.2",
-        "grpc-server-reflection": "^0.1.5"
+        "grpc-server-reflection": "^0.1.5",
+        "pg": "^8.10.0",
+        "typeorm": "^0.3.12"
     }
 }

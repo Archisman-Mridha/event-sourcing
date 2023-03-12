@@ -1,4 +1,4 @@
-import { InboundAdapters } from "./Adapters/Inbound/GrpcAdapter"
+import * as InboundAdapters from "./Adapters/Inbound/Index"
 
 function main( ){
 

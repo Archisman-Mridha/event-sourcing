@@ -1,7 +1,0 @@
-{
-    "name": "orders-microservice",
-    "version": "1.0.0",
-    "scripts": {
-        "serve": "nodemon -e ts --exec 'tsc -p . && node ../../build/backend/OrdersMicroservice/Main.js'"
-    }
-}

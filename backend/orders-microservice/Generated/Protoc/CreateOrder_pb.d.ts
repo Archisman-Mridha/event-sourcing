@@ -7,10 +7,10 @@
 import * as jspb from "google-protobuf";
 
 export class CreateOrderRequest extends jspb.Message {
-    getRestaurantid(): number;
-    setRestaurantid(value: number): CreateOrderRequest;
-    getConsumerid(): number;
-    setConsumerid(value: number): CreateOrderRequest;
+    getRestaurantid(): string;
+    setRestaurantid(value: string): CreateOrderRequest;
+    getConsumerid(): string;
+    setConsumerid(value: string): CreateOrderRequest;
     clearOrderedproductsList(): void;
     getOrderedproductsList(): Array<OrderedProduct>;
     setOrderedproductsList(value: Array<OrderedProduct>): CreateOrderRequest;
@@ -46,8 +46,8 @@ export class CreateOrderRequest extends jspb.Message {
 
 export namespace CreateOrderRequest {
     export type AsObject = {
-        restaurantid: number;
-        consumerid: number;
+        restaurantid: string;
+        consumerid: string;
         orderedproductsList: Array<OrderedProduct.AsObject>;
         deliveryaddress?: Address.AsObject;
         deliverydeadline: string;
@@ -55,8 +55,8 @@ export namespace CreateOrderRequest {
 }
 
 export class CreateOrderResponse extends jspb.Message {
-    getOrderid(): number;
-    setOrderid(value: number): CreateOrderResponse;
+    getOrderid(): string;
+    setOrderid(value: string): CreateOrderResponse;
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): CreateOrderResponse.AsObject;
@@ -81,13 +81,13 @@ export class CreateOrderResponse extends jspb.Message {
 
 export namespace CreateOrderResponse {
     export type AsObject = {
-        orderid: number;
+        orderid: string;
     };
 }
 
 export class OrderedProduct extends jspb.Message {
-    getProductid(): number;
-    setProductid(value: number): OrderedProduct;
+    getProductid(): string;
+    setProductid(value: string): OrderedProduct;
     getQuantity(): number;
     setQuantity(value: number): OrderedProduct;
 
@@ -114,7 +114,7 @@ export class OrderedProduct extends jspb.Message {
 
 export namespace OrderedProduct {
     export type AsObject = {
-        productid: number;
+        productid: string;
         quantity: number;
     };
 }

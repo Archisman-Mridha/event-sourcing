@@ -155,8 +155,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
     ) {
         var f,
             obj = {
-                restaurantid: jspb.Message.getFieldWithDefault(msg, 1, 0),
-                consumerid: jspb.Message.getFieldWithDefault(msg, 2, 0),
+                restaurantid: jspb.Message.getFieldWithDefault(msg, 1, ""),
+                consumerid: jspb.Message.getFieldWithDefault(msg, 2, ""),
                 orderedproductsList: jspb.Message.toObjectList(
                     msg.getOrderedproductsList(),
                     proto.OrdersService.OrderedProduct.toObject,
@@ -207,11 +207,11 @@ proto.OrdersService.CreateOrderRequest.deserializeBinaryFromReader = function (
         var field = reader.getFieldNumber();
         switch (field) {
             case 1:
-                var value = /** @type {number} */ (reader.readInt64());
+                var value = /** @type {string} */ (reader.readString());
                 msg.setRestaurantid(value);
                 break;
             case 2:
-                var value = /** @type {number} */ (reader.readInt64());
+                var value = /** @type {string} */ (reader.readString());
                 msg.setConsumerid(value);
                 break;
             case 3:
@@ -269,12 +269,12 @@ proto.OrdersService.CreateOrderRequest.serializeBinaryToWriter = function (
 ) {
     var f = undefined;
     f = message.getRestaurantid();
-    if (f !== 0) {
-        writer.writeInt64(1, f);
+    if (f.length > 0) {
+        writer.writeString(1, f);
     }
     f = message.getConsumerid();
-    if (f !== 0) {
-        writer.writeInt64(2, f);
+    if (f.length > 0) {
+        writer.writeString(2, f);
     }
     f = message.getOrderedproductsList();
     if (f.length > 0) {
@@ -299,39 +299,43 @@ proto.OrdersService.CreateOrderRequest.serializeBinaryToWriter = function (
 };
 
 /**
- * optional int64 restaurantID = 1;
- * @return {number}
+ * optional string restaurantID = 1;
+ * @return {string}
  */
 proto.OrdersService.CreateOrderRequest.prototype.getRestaurantid = function () {
-    return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+    return /** @type {string} */ (
+        jspb.Message.getFieldWithDefault(this, 1, "")
+    );
 };
 
 /**
- * @param {number} value
+ * @param {string} value
  * @return {!proto.OrdersService.CreateOrderRequest} returns this
  */
 proto.OrdersService.CreateOrderRequest.prototype.setRestaurantid = function (
     value
 ) {
-    return jspb.Message.setProto3IntField(this, 1, value);
+    return jspb.Message.setProto3StringField(this, 1, value);
 };
 
 /**
- * optional int64 consumerID = 2;
- * @return {number}
+ * optional string consumerID = 2;
+ * @return {string}
  */
 proto.OrdersService.CreateOrderRequest.prototype.getConsumerid = function () {
-    return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+    return /** @type {string} */ (
+        jspb.Message.getFieldWithDefault(this, 2, "")
+    );
 };
 
 /**
- * @param {number} value
+ * @param {string} value
  * @return {!proto.OrdersService.CreateOrderRequest} returns this
  */
 proto.OrdersService.CreateOrderRequest.prototype.setConsumerid = function (
     value
 ) {
-    return jspb.Message.setProto3IntField(this, 2, value);
+    return jspb.Message.setProto3StringField(this, 2, value);
 };
 
 /**
@@ -481,7 +485,7 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
     ) {
         var f,
             obj = {
-                orderid: jspb.Message.getFieldWithDefault(msg, 1, 0),
+                orderid: jspb.Message.getFieldWithDefault(msg, 1, ""),
             };
 
         if (includeInstance) {
@@ -523,7 +527,7 @@ proto.OrdersService.CreateOrderResponse.deserializeBinaryFromReader = function (
         var field = reader.getFieldNumber();
         switch (field) {
             case 1:
-                var value = /** @type {number} */ (reader.readInt64());
+                var value = /** @type {string} */ (reader.readString());
                 msg.setOrderid(value);
                 break;
             default:
@@ -561,27 +565,29 @@ proto.OrdersService.CreateOrderResponse.serializeBinaryToWriter = function (
 ) {
     var f = undefined;
     f = message.getOrderid();
-    if (f !== 0) {
-        writer.writeInt64(1, f);
+    if (f.length > 0) {
+        writer.writeString(1, f);
     }
 };
 
 /**
- * optional int64 orderID = 1;
- * @return {number}
+ * optional string orderID = 1;
+ * @return {string}
  */
 proto.OrdersService.CreateOrderResponse.prototype.getOrderid = function () {
-    return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+    return /** @type {string} */ (
+        jspb.Message.getFieldWithDefault(this, 1, "")
+    );
 };
 
 /**
- * @param {number} value
+ * @param {string} value
  * @return {!proto.OrdersService.CreateOrderResponse} returns this
  */
 proto.OrdersService.CreateOrderResponse.prototype.setOrderid = function (
     value
 ) {
-    return jspb.Message.setProto3IntField(this, 1, value);
+    return jspb.Message.setProto3StringField(this, 1, value);
 };
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -621,7 +627,7 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
     ) {
         var f,
             obj = {
-                productid: jspb.Message.getFieldWithDefault(msg, 1, 0),
+                productid: jspb.Message.getFieldWithDefault(msg, 1, ""),
                 quantity: jspb.Message.getFieldWithDefault(msg, 2, 0),
             };
 
@@ -664,7 +670,7 @@ proto.OrdersService.OrderedProduct.deserializeBinaryFromReader = function (
         var field = reader.getFieldNumber();
         switch (field) {
             case 1:
-                var value = /** @type {number} */ (reader.readInt64());
+                var value = /** @type {string} */ (reader.readString());
                 msg.setProductid(value);
                 break;
             case 2:
@@ -702,8 +708,8 @@ proto.OrdersService.OrderedProduct.serializeBinaryToWriter = function (
 ) {
     var f = undefined;
     f = message.getProductid();
-    if (f !== 0) {
-        writer.writeInt64(1, f);
+    if (f.length > 0) {
+        writer.writeString(1, f);
     }
     f = message.getQuantity();
     if (f !== 0) {
@@ -712,19 +718,21 @@ proto.OrdersService.OrderedProduct.serializeBinaryToWriter = function (
 };
 
 /**
- * optional int64 productID = 1;
- * @return {number}
+ * optional string productID = 1;
+ * @return {string}
  */
 proto.OrdersService.OrderedProduct.prototype.getProductid = function () {
-    return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+    return /** @type {string} */ (
+        jspb.Message.getFieldWithDefault(this, 1, "")
+    );
 };
 
 /**
- * @param {number} value
+ * @param {string} value
  * @return {!proto.OrdersService.OrderedProduct} returns this
  */
 proto.OrdersService.OrderedProduct.prototype.setProductid = function (value) {
-    return jspb.Message.setProto3IntField(this, 1, value);
+    return jspb.Message.setProto3StringField(this, 1, value);
 };
 
 /**

@@ -6,8 +6,8 @@ option java_multiple_files=true;
 
 message CreateOrderRequest {
 
-    int64 restaurantID= 1;
-    int64 consumerID= 2;
+    string restaurantID= 1;
+    string consumerID= 2;
 
     repeated OrderedProduct orderedProducts= 3;
 
@@ -16,12 +16,12 @@ message CreateOrderRequest {
 }
 
 message CreateOrderResponse {
-    int64 orderID= 1;
+    string orderID= 1;
 }
 
 message OrderedProduct {
 
-    int64 productID= 1;
+    string productID= 1;
     int32 quantity= 2;
 }
 

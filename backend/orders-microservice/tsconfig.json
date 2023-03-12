@@ -1,7 +1,7 @@
 {
     "extends": "../../tsconfig.base.json",
     "compilerOptions": {
-        "outDir": "../../build/backend/OrdersMicroservice",
+        "outDir": "../../build/backend/orders-microservice",
         "baseUrl": ".",
         "paths": {
             "@ProtocGenerated/*": ["./Generated/Protoc/*"]
@@ -9,5 +9,6 @@
     },
     "exclude": [
         "node_modules"
-    ]
+    ],
+    "include": ["**/*", "../shared/Domain/Errors"]
 }
